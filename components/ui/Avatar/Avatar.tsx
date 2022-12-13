@@ -16,9 +16,6 @@ const avatar = cva(
 export interface AvatarProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof avatar> {
-  /**
-   * Any text you put in here will be reduced to a single letter.
-   */
   children: string;
   backgroundColor?: string;
 }

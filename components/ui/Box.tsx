@@ -4,9 +4,6 @@ const box = cva(
   "box p-10 flex items-center justify-center rounded-md border border-gray-400",
   {
     variants: {
-      /**
-       * Hierarchical types of buttons
-       */
       intent: {
         primary: "text-black bg-white",
         secondary: "text-gray-50 bg-gray-500",
