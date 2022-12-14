@@ -1,5 +1,5 @@
 import { type VariantProps } from "class-variance-authority";
-import { navbar } from "../Brand/Brand";
+import { navbar } from "@/components/Brand";
 
 export interface NavbarProps
   extends React.HTMLAttributes<HTMLDivElement>,

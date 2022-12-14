@@ -38,10 +38,17 @@ Danger.args = {
   children: <span>Danger</span>,
 };
 
+export const Alert = Template.bind({});
+Alert.args = {
+  intent: "alert",
+  children: "Alert",
+};
+
 export const Navigation = Template.bind({});
 Navigation.args = {
   size: "small",
-  intent: "navigation",
+  intent: "primary",
+  context: "menu",
   children: <span>Menu Item</span>,
 };
 
@@ -50,7 +57,7 @@ WithStatus.args = {
   size: "small",
   children: (
     <div className="flex flex-row items-center justify-between">
-      <span className="w-3 h-3 bg-green-400 rounded-full"></span>
+      <span className="h-3 w-3 rounded-full bg-green-400"></span>
       <span className="px-2">Button</span>
     </div>
   ),

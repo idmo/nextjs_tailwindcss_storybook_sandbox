@@ -20,9 +20,9 @@ WithMenu.args = {
   children: (
     <>
       <div>
-        <Button intent="navigation">Home</Button>
-        <Button intent="navigation">About</Button>
-        <Button intent="navigation">Contact</Button>
+        <Button context="navigation">Home</Button>
+        <Button context="navigation">About</Button>
+        <Button context="navigation">Settings</Button>
       </div>
       <div>
         <Avatar>Brian</Avatar>

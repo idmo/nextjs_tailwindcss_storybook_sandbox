@@ -28,7 +28,6 @@ const Home: NextPage = () => {
         </p>
 
         <div className="flex w-full max-w-[800px] flex-col flex-wrap items-center justify-center sm:w-auto sm:flex-row">
-          <Box name="box" intent="secondary" />
           <Card
             href="https://nextjs.org/docs"
             title="Documentation &rarr;"
