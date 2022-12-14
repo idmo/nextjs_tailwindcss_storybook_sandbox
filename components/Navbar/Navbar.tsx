@@ -1,22 +1,28 @@
-import { cva, type VariantProps } from "class-variance-authority";
-
-const navbar = cva("bg-gray-100 border border-b-1 py-4 px-6");
+import { type VariantProps } from "class-variance-authority";
+import { navbar } from "../Brand/Brand";
 
 export interface NavbarProps
-  extends React.HtmlHTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof navbar> {
   children: any;
   backgroundColor?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
+  size,
+  border,
   children,
+  className,
   backgroundColor,
   ...props
 }) => {
   return (
     <>
-      <div style={{ backgroundColor }} className={navbar({})} {...props}>
+      <div
+        style={{ backgroundColor }}
+        className={navbar({ size, border, className })}
+        {...props}
+      >
         {children}
       </div>
     </>

@@ -7,7 +7,6 @@ const box = cva(
       intent: {
         primary: "text-black bg-white",
         secondary: "text-gray-50 bg-gray-500",
-        default: "text-gray-700 bg-gray-50",
       },
 
       /**
@@ -20,13 +19,13 @@ const box = cva(
       },
     },
     defaultVariants: {
-      intent: "default",
+      intent: "primary",
     },
   }
 );
 
 export interface BoxProps
-  extends React.HtmlHTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof box> {
   children: any;
   backgroundColor?: string;

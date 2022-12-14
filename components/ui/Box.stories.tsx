@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Box } from "@ui/Box";
+import { Box } from "@/components/UI/Box";
 
 export default {
   title: "UI/Box",
@@ -15,7 +15,6 @@ const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  intent: "default",
   fullWidth: false,
   children: <div>{"foo"}s</div>,
 };

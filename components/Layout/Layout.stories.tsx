@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Layout } from "@/components/Layout";
 import { Navbar } from "../Navbar";
-import { Avatar } from "../ui/Avatar";
+import { Avatar } from "../UI/Avatar";
 
 export default {
   title: "Components/Layout",
@@ -23,13 +23,13 @@ Default.args = {
 export const WithNavbarMenu = Template.bind({});
 WithNavbarMenu.args = {
   children: (
-    <Navbar className="flex items-center justify-between p-3 rounded-medium">
-      <div className="flex flex-row space-x-3">
+    <Navbar>
+      <div className="flex flex-row items-center space-x-3">
         <div>Menu</div>
         <div>Item</div>
         <div>Item</div>
       </div>
-      <Avatar intent="medium">Brian</Avatar>
+      <Avatar size="large">Brian</Avatar>
     </Navbar>
   ),
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Avatar } from "@/components/ui/Avatar/Avatar";
+import { Avatar } from "@/components/UI/Avatar/Avatar";
 
 export default {
   title: "UI/Avatar",
@@ -15,18 +15,18 @@ const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
 export const Small = Template.bind({});
 Small.args = {
-  intent: "small",
+  size: "small",
   children: "Small",
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  intent: "medium",
+  size: "medium",
   children: "Medium",
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  intent: "large",
+  size: "large",
   children: "Large",
 };
