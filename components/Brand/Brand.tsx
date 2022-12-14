@@ -2,6 +2,17 @@ import { cva } from "class-variance-authority";
 
 export const brand = cva("bg-purple-200");
 
+export const theme = cva("", {
+  variants: {
+    intent: {
+      alert: "bg-alert-700 text-alert-100",
+      danger: "bg-danger-700 text-danger-100",
+      primary: "bg-primary-700 text-primary-100",
+      secondary: "bg-secondary-700 text-secondary-100",
+    },
+  },
+});
+
 export const avatar = cva(
   "rounded-full border-2 border-gray-500 flex flex-col text-center justify-center align-middle font-semibold bg-gray-50",
   {

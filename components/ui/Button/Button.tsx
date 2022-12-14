@@ -13,12 +13,13 @@ export const Button: React.FC<ButtonProps> = ({
   context,
   intent,
   size,
+  className,
   backgroundColor,
   children,
   ...props
 }) => {
   return (
-    <button className={button({ intent, size, context })} {...props}>
+    <button className={button({ intent, size, context, className })} {...props}>
       {children}
     </button>
   );
