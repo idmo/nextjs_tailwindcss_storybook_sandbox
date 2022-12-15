@@ -17,16 +17,13 @@ const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
 export const WithMenu = Template.bind({});
 WithMenu.args = {
+  orientation: "horiztonal",
   children: (
     <>
-      <div>
-        <Button context="navigation">Home</Button>
-        <Button context="navigation">About</Button>
-        <Button context="navigation">Settings</Button>
-      </div>
-      <div>
-        <Avatar>Brian</Avatar>
-      </div>
+      <Button context="navigation">Home</Button>
+      <Button context="navigation">About</Button>
+      <Button context="navigation">Settings</Button>
+      <Avatar>Brian</Avatar>
     </>
   ),
 };

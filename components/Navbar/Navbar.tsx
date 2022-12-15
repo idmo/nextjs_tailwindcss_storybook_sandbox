@@ -1,16 +1,16 @@
 import { type VariantProps } from "class-variance-authority";
-import { navbar } from "@/components/Brand";
+import { theme } from "@/components/Brand";
 
 export interface NavbarProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof navbar> {
+    VariantProps<typeof theme> {
   children: any;
   backgroundColor?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  size,
-  border,
+  orientation,
+  padding,
   children,
   className,
   backgroundColor,
@@ -20,7 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       <div
         style={{ backgroundColor }}
-        className={navbar({ size, border, className })}
+        className={theme({ orientation, padding, className })}
         {...props}
       >
         {children}

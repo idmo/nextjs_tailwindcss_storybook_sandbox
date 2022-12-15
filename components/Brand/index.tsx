@@ -1,1 +1,1 @@
-export { button, brand, navbar, avatar, hstack, vstack } from "./Brand";
+export { button, brand, navbar, avatar, hstack, vstack, theme } from "./Brand";

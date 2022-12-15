@@ -1,10 +1,9 @@
 import { type VariantProps } from "class-variance-authority";
-
-import { header } from "../Brand/Brand";
+import { theme } from "@/components/Brand";
 
 export interface HeaderProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof header> {
+    VariantProps<typeof theme> {
   children: any;
   backgroundColor?: string;
 }
@@ -18,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <div
       style={{ backgroundColor }}
-      className={header({ className })}
+      className={theme({ className })}
       {...props}
     >
       {children}

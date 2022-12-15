@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
-import Card from "@/components/Card";
+
 import VercelSVG from "@/public/vercel.svg";
 import Link from "next/link";
-import Box from "@/components/UI/Box";
 
 const Home: NextPage = () => {
   return (
@@ -26,29 +25,6 @@ const Home: NextPage = () => {
             </code>
           </Link>
         </p>
-
-        <div className="flex w-full max-w-[800px] flex-col flex-wrap items-center justify-center sm:w-auto sm:flex-row">
-          <Card
-            href="https://nextjs.org/docs"
-            title="Documentation &rarr;"
-            content="Find in-depth information about Next.js features and API."
-          />
-          <Card
-            href="https://nextjs.org/learn"
-            title="Learn &rarr;"
-            content="Learn about Next.js in an interactive course with quizzes!"
-          />
-          <Card
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            title="Examples &rarr;"
-            content="Discover and deploy boilerplate example Next.js projects."
-          />
-          <Card
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            title="Deploy &rarr;"
-            content="Instantly deploy your Next.js site to a public URL with Vercel."
-          />
-        </div>
       </main>
 
       <footer className="flex flex-1 items-center justify-center border-t border-solid border-t-[#eaeaea] py-8">

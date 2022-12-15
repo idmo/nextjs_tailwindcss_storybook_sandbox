@@ -1,9 +1,9 @@
 import { type VariantProps } from "class-variance-authority";
-import { button } from "@/components/Brand";
+import { theme } from "@/components/Brand";
 
 export interface ButtonProps
   extends React.HTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {
+    VariantProps<typeof theme> {
   children: any;
   backgroundColor?: string;
   onClick?: () => void;
@@ -12,14 +12,13 @@ export interface ButtonProps
 export const Button: React.FC<ButtonProps> = ({
   context,
   intent,
-  size,
   className,
   backgroundColor,
   children,
   ...props
 }) => {
   return (
-    <button className={button({ intent, size, context, className })} {...props}>
+    <button className={theme({ intent, context, className })} {...props}>
       {children}
     </button>
   );

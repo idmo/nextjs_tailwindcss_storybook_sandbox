@@ -10,6 +10,22 @@ export const theme = cva("", {
       primary: "bg-primary-700 text-primary-100",
       secondary: "bg-secondary-700 text-secondary-100",
     },
+    padding: {
+      small: "p-4",
+      medium: "p-8",
+      large: "p-12",
+    },
+    orientation: {
+      vertical: "flex flex-col items-left space-y-2",
+      horiztonal: "flex flex-row items-center space-x-2",
+    },
+    context: {
+      menu: "text-center",
+      navigation: "text-left",
+    },
+    element: {
+      container: "mx-auto max-w-7xl sm:px-6 lg:px-8",
+    },
   },
 });
 
@@ -28,26 +44,6 @@ export const avatar = cva(
     },
   }
 );
-
-export const navbar = cva("px-4 flex flex-row justify-between", {
-  variants: {
-    /** Determines the height of the Navigation Box */
-    size: {
-      small: "py-2 text-sm",
-      medium: "py-4 text-lg",
-      large: "py-8 text-xl font-semibold",
-    },
-
-    /** Determines type of border */
-    border: {
-      thin: "border-b border-black",
-      thick: "border-b-2 border-black",
-    },
-  },
-  defaultVariants: {
-    size: "medium",
-  },
-});
 
 export const button = cva("py-1.5 px-2 rounded-2xl font-semibold uppercase", {
   variants: {
@@ -68,8 +64,6 @@ export const button = cva("py-1.5 px-2 rounded-2xl font-semibold uppercase", {
     },
   },
 });
-
-export const header = cva("bg-primary-200");
 
 export const vstack = cva("flex flex-col justify-start space-y-2");
 

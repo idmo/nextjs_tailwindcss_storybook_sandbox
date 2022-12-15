@@ -1,22 +1,21 @@
 import { type VariantProps } from "class-variance-authority";
+import { theme } from "../Brand";
 
-import { theme } from "@/components/Brand";
-
-export interface LayoutProps
+export interface ContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof theme> {
   children: any;
   backgroundColor?: string;
 }
 
-export const Layout: React.FC<LayoutProps> = ({
+export const Container: React.FC<ContainerProps> = ({
+  element,
   children,
-  backgroundColor,
   ...props
 }) => {
   return (
     <>
-      <div style={{ backgroundColor }} className={theme({})} {...props}>
+      <div className={theme({ element })} {...props}>
         {children}
       </div>
     </>
