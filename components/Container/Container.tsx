@@ -1,23 +1,9 @@
-import { type VariantProps } from "class-variance-authority";
-import { theme } from "../Brand";
+import styles from './Container.scss';
 
-export interface ContainerProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof theme> {
-  children: any;
-  backgroundColor?: string;
+export interface ContainerProps {
+  prop?: string;
 }
 
-export const Container: React.FC<ContainerProps> = ({
-  element,
-  children,
-  ...props
-}) => {
-  return (
-    <>
-      <div className={theme({ element })} {...props}>
-        {children}
-      </div>
-    </>
-  );
-};
+export function Container({prop = 'default value'}: ContainerProps) {
+  return <div className={styles.Container}>Container {prop}</div>;
+}

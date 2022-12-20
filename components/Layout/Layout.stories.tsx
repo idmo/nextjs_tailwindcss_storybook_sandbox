@@ -3,11 +3,11 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Layout } from "@/components/Layout";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Layout/Footer";
 import { Container } from "@/components/Container";
 import { Avatar } from "@ui/Avatar";
-import { VStack } from "@ui/VStack";
-import { HStack } from "@ui/HStack";
+import { VStack } from "@/components/Layout/VStack";
+import { HStack } from "@/components/Layout/HStack";
 import { Button } from "@ui/Button";
 
 export default {

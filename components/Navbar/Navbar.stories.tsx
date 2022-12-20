@@ -6,7 +6,7 @@ import { Button } from "../UI/Button/Button";
 import { Avatar } from "../UI/Avatar";
 
 export default {
-  title: "Components/Navbar",
+  title: "Navbar",
   component: Navbar,
   argTypes: {
     backgroundColor: { control: "color" },

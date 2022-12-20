@@ -2,26 +2,53 @@ import { cva } from "class-variance-authority";
 
 export const brand = cva("bg-purple-200");
 
+const contexts = {
+  menu: "rounded text-center",
+  navigation: "",
+  panel: "",
+  modal: "",
+};
+
+const buttonContexts = {
+  action: "rounded-md px-2 py-0.5 text-sm",
+  link: "p-0 border-none hover:text-gray-600",
+  navigation: "",
+  menu: "",
+};
+
+const intents = {
+  success: "border-2 border-succes-800 text-success-800",
+  warning: "border-2 border-alert-800 text-alert-800",
+  danger: "border-2 border-danger-800 text-danger-800",
+  primary: "bg-primary-100 text-primary-800",
+  secondary: "bg-secondary-100 text-secondary-800",
+};
+
+export const alert = cva(
+  "flex rounded-md shadow-lg p-4 [&_header]:font-bold [&_main]:text-black [&_main]:flex-shrink-0 [&_main]:py-3 [&_section]:ml-3 [&_section]:w-full [&_footer]:space-x-1 [&_footer]:float-right [&_footer]:pr-4",
+  {
+    variants: {
+      intent: intents,
+    },
+  }
+);
+
 export const theme = cva("", {
   variants: {
-    intent: {
-      alert: "bg-alert-700 text-alert-100",
-      danger: "bg-danger-700 text-danger-100",
-      primary: "bg-primary-700 text-primary-100",
-      secondary: "bg-secondary-700 text-secondary-100",
-    },
+    intent: intents,
+    context: contexts,
     padding: {
       small: "p-4",
       medium: "p-8",
       large: "p-12",
     },
+    weight: {
+      bold: "font-semibold",
+      light: "font-extralight",
+    },
     orientation: {
       vertical: "flex flex-col items-left space-y-2",
       horiztonal: "flex flex-row items-center space-x-2",
-    },
-    context: {
-      menu: "text-center",
-      navigation: "text-left",
     },
     element: {
       container: "mx-auto max-w-7xl sm:px-6 lg:px-8",
@@ -45,23 +72,18 @@ export const avatar = cva(
   }
 );
 
-export const button = cva("py-1.5 px-2 rounded-2xl font-semibold uppercase", {
+export const button = cva("font-semibold uppercase", {
   variants: {
-    intent: {
-      alert: "bg-alert-700 text-alert-100",
-      danger: "bg-danger-700 text-danger-100",
-      primary: "bg-primary-700 text-primary-100",
-      secondary: "bg-secondary-700 text-secondary-100",
-    },
-    context: {
-      menu: "",
-      navigation: "",
-    },
+    intent: intents,
+    context: buttonContexts,
     size: {
       small: "text-sm",
       medium: "text-lg",
       large: "text-xl",
     },
+  },
+  defaultVariants: {
+    size: "medium",
   },
 });
 

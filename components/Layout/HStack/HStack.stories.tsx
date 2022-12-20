@@ -1,10 +1,8 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { HStack } from "./HStack";
+import { HStack } from "@/components/Layout/HStack";
 
 export default {
-  title: "UI/HStack",
   component: HStack,
   argTypes: {
     backgroundColor: { control: "color" },

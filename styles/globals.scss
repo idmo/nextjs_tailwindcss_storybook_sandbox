@@ -23,3 +23,17 @@ svg {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+
+  .icon {
+    @apply flex-shrink-0
+  }
+  .title {
+    @apply text-sm font-medium;
+  }
+  .description {
+    @apply mt-2 text-sm;
+  }
+}

@@ -4,7 +4,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Footer } from "./Footer";
 
 export default {
-  title: "Components/Footer",
   component: Footer,
   argTypes: {
     backgroundColor: { control: "color" },

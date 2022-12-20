@@ -1,10 +1,8 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { VStack } from "./VStack";
+import { VStack } from "@/components/Layout/VStack";
 
 export default {
-  title: "UI/VStack",
   component: VStack,
   argTypes: {
     backgroundColor: { control: "color" },

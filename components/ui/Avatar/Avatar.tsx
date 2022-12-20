@@ -1,5 +1,5 @@
-import { type VariantProps } from "class-variance-authority";
-import { avatar } from "@/components/Brand/Brand";
+import { type VariantProps, cx } from "class-variance-authority";
+import { avatar, theme } from "@/components/Brand";
 
 export interface AvatarProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -10,12 +10,17 @@ export interface AvatarProps
 
 export const Avatar: React.FC<AvatarProps> = ({
   size,
+  className,
   children,
   backgroundColor,
   ...props
 }) => {
   return (
-    <div style={{ backgroundColor }} className={avatar({ size })} {...props}>
+    <div
+      style={{ backgroundColor }}
+      className={avatar({ size, className })}
+      {...props}
+    >
       <span>{children.slice(0, 1)}</span>
     </div>
   );

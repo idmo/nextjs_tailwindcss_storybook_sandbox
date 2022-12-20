@@ -13,20 +13,8 @@ export default {
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
-export const Small = Template.bind({});
-Small.args = {
+export const Default = Template.bind({});
+Default.args = {
   size: "small",
   children: "Small",
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  size: "medium",
-  children: "Medium",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  children: "Large",
 };
