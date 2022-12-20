@@ -1,5 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -10,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        success: colors.green,
         danger: colors.red,
         alert: colors.amber,
         info: colors.neutral,
