@@ -9,9 +9,11 @@ export interface ButtonProps
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  size,
+  /** Determines when and where to use a button */
   context,
+  /** Not sure we even need it for a button */
   intent,
+  size,
   className,
   children,
   ...props

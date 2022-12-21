@@ -4,10 +4,10 @@ import { Alert } from "./Alert";
 import { Button } from "@/components/UI/Button";
 
 const actions = [
-  <Button context="action" intent={"success"} key={0} onClick={() => {}}>
-    Go
+  <Button context="link" key={0} onClick={() => {}}>
+    Okay
   </Button>,
-  <Button context="link" intent={"danger"} key={1} onClick={() => {}}>
+  <Button context="link" key={1} onClick={() => {}}>
     Cancel
   </Button>,
 ];

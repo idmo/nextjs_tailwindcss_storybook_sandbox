@@ -4,7 +4,7 @@ import type { ButtonGroupProps } from "./ButtonGroup";
 import { ButtonGroup } from "./ButtonGroup";
 
 const meta: Meta = {
-  title: "Button Group",
+  title: "Sandbox/Button Group",
   component: ButtonGroup,
   parameters: {},
 };
@@ -16,4 +16,4 @@ const Template: StoryFn<ButtonGroupProps> = (args) => <ButtonGroup {...args} />;
 export const Basic = Template.bind({});
 
 Basic.args = {};
-Basic.storyName = "Huh";
+Basic.storyName = "Button Group";

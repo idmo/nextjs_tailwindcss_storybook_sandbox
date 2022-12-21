@@ -10,10 +10,10 @@ module.exports = {
       colors: {
         success: colors.green,
         danger: colors.red,
-        alert: colors.amber,
-        info: colors.neutral,
+        warning: colors.amber,
         primary: colors.sky,
         secondary: colors.zinc,
+        info: colors.neutral,
       },
     },
   },

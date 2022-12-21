@@ -10,22 +10,52 @@ const contexts = {
 };
 
 const buttonContexts = {
-  action: "rounded-md px-2 py-0.5 text-sm",
-  link: "p-0 border-none hover:text-gray-600",
+  /** Performs a specific function like new item */
+  action: "rounded-md px-2 py-0.5 ring-1",
+  /** Text-only button */
+  link: "p-0 border-none",
+  /** Takes user to a different section of the app */
   navigation: "",
+  /** One of many functions available */
   menu: "",
+  /** Standard button */
+  default: "ring-1 rounded",
+};
+
+const sizes = {
+  xs: "text-xs px-1.5 py-1",
+  sm: "text-sm px-1.5 py-1",
+  md: "text-base px-1 py-1",
+  lg: "text-xl px-1.5 py-1.5",
+  xl: "text-xl px-2 py-2",
 };
 
 const intents = {
-  success: "border-2 border-succes-800 text-success-800",
-  warning: "border-2 border-alert-800 text-alert-800",
-  danger: "border-2 border-danger-800 text-danger-800",
-  primary: "bg-primary-100 text-primary-800",
-  secondary: "bg-secondary-100 text-secondary-800",
+  success: "ring-success-800 bg-success-50 text-success-800",
+  warning: "ring-warning-800 bg-warning-50 text-alert-800",
+  danger: "ring-danger-800 bg-danger-50 text-danger-800",
+  primary: "ring-primary-800 bg-primary-50 text-primary-800",
+  secondary: "ring-secondary-800 bg-secondary-50 text-secondary-800",
+  info: "ring-info-800 bg-info-50 text-info-800",
 };
 
+export const action = cva(
+  "text-sm p-1.5 ring-1 rounded uppercase tracking-wide flex item-center",
+  {
+    variants: {
+      context: {
+        create: "before:content-['➕']",
+        delete: "before:content-['➖']",
+        cancel: "before:content-['✖️']",
+        more: "before:content-['•••']",
+        info: "before:content-['ℹ️']",
+      },
+    },
+  }
+);
+
 export const alert = cva(
-  "flex rounded-md shadow-lg p-4 [&_header]:font-bold [&_main]:text-black [&_main]:flex-shrink-0 [&_main]:py-3 [&_section]:ml-3 [&_section]:w-full [&_footer]:space-x-1 [&_footer]:float-right [&_footer]:pr-4",
+  "flex rounded-md p-4 [&_header]:font-bold [&_main]:text-black [&_main]:flex-shrink-0 [&_main]:py-3 [&_section]:ml-3 [&_section]:w-full [&_footer]:space-x-1 [&_footer]:float-right [&_footer]:pr-4 ring-1",
   {
     variants: {
       intent: intents,
@@ -72,18 +102,14 @@ export const avatar = cva(
   }
 );
 
-export const button = cva("font-semibold uppercase", {
+export const button = cva("font-semibold uppercase tracking-wide", {
   variants: {
     intent: intents,
     context: buttonContexts,
-    size: {
-      small: "text-sm",
-      medium: "text-lg",
-      large: "text-xl",
-    },
+    size: sizes,
   },
   defaultVariants: {
-    size: "medium",
+    size: "md",
   },
 });
 

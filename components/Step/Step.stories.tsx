@@ -1,19 +1,20 @@
-import type {Meta, StoryFn} from '@storybook/react';
+import type { Meta, StoryFn } from "@storybook/react";
 
-import type {StepProps} from './Step';
-import {Step} from './Step';
+import type { StepProps } from "./Step";
+import { Step } from "./Step";
 
 // Learn how to write stories:
 // https://web.docs.shopify.io/docs/guides/storybook/how-to-write-story-files
 const meta: Meta = {
+  title: "Sandbox / Step",
   component: Step,
   parameters: {
     // Embedding Figma designs
     // The embed appears in the "Design" tab of the story
     // Learn more: https://pocka.github.io/storybook-addon-designs/?path=/docs/docs-figma-readme--page
     design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/...?node-id=...',
+      type: "figma",
+      url: "https://www.figma.com/file/...?node-id=...",
     },
   },
 };

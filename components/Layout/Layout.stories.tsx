@@ -11,7 +11,7 @@ import { HStack } from "@/components/Layout/HStack";
 import { Button } from "@ui/Button";
 
 export default {
-  title: "Application Shells",
+  title: "Sandbox / Application Shells",
   component: Layout,
   argTypes: {
     backgroundCOlor: { control: "color" },
