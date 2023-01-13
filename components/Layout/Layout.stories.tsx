@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Layout } from "@/components/Layout";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Layout/Footer";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/Layout/Container";
 import { Avatar } from "@ui/Avatar";
 import { VStack } from "@/components/Layout/VStack";
 import { HStack } from "@/components/Layout/HStack";
