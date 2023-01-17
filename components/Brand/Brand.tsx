@@ -117,11 +117,23 @@ export const vstack = cva("flex flex-col justify-start space-y-2");
 export const hstack = cva("flex flex-row justify-start space-x-2");
 export const zstack = cva("flex");
 
-export const container = cva("container mx-auto sm:px-6 lg:px-8", {
-  variants: {
-    context: {
-      full: "max-w-7xl",
-      narrow: "max-w-7xl px-4",
+export const container = cva(
+  "container mx-auto sm:px-6 sm:py-2 lg:px-8 lg:py-3 rounded",
+  {
+    variants: {
+      size: {
+        full: "max-w-7xl",
+        narrow: "max-w-7xl px-4",
+        constrained: "max-w-3xl",
+      },
+      context: {
+        box: "border border-black",
+        panel: "shadow-lg",
+        card: "bg-white",
+      },
     },
-  },
-});
+    defaultVariants: {
+      size: "full",
+    },
+  }
+);

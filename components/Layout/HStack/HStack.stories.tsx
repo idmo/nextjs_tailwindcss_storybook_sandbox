@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { HStack } from "@/components/Layout/HStack";
+import { Container } from "@/components/Layout/Container";
 
 export default {
   component: HStack,
@@ -21,6 +22,32 @@ Default.args = {
       <div>Horizontal</div>
       <div>Horizontal</div>
       <div>Horizontal</div>
+    </>
+  ),
+};
+
+export const Grid = Template.bind({});
+Grid.args = {
+  children: (
+    <>
+      <Container>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+      </Container>
+      <Container>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+      </Container>
+      <Container>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+        <div className="bg-gray-200">Nested</div>
+      </Container>
     </>
   ),
 };
