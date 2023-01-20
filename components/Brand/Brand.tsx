@@ -113,8 +113,8 @@ export const button = cva("font-semibold uppercase tracking-wide", {
   },
 });
 
-export const vstack = cva("flex flex-col justify-start space-y-2");
-export const hstack = cva("flex flex-row justify-start space-x-2");
+export const vstack = cva("flex flex-col justify-start");
+export const hstack = cva("flex flex-row justify-start");
 export const zstack = cva("flex");
 
 export const container = cva(
@@ -134,6 +134,56 @@ export const container = cva(
     },
     defaultVariants: {
       size: "full",
+    },
+  }
+);
+
+export const token = cva("rounded", {
+  variants: {
+    size: {
+      lg: "text-lg",
+      md: "text-base",
+      sm: "text-sm",
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+  },
+});
+
+export const wrapper = cva("flex flex-row hover:bg-blue-100 space-x-3", {
+  variants: {
+    alignment: {
+      right: "justify-end",
+      row: "justify-between px-1",
+      center: "justify-center",
+      left: "justify-start",
+    },
+    spacing: {
+      short: "py-0.5",
+      tall: "py-2",
+      default: "py-1.5",
+    },
+  },
+  defaultVariants: {
+    alignment: "left",
+    spacing: "default",
+  },
+});
+
+export const handle = cva(
+  "rounded mx-1.5 bg-white hover:bg-gray-200 hover:ring-1",
+  {
+    variants: {
+      size: {
+        sm: "w-4 h-4",
+        md: "w-5 h-5",
+        lg: "w-6 h-6",
+        xl: "w-7 h-7",
+      },
+    },
+    defaultVariants: {
+      size: "md",
     },
   }
 );

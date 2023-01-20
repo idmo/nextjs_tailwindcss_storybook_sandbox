@@ -20,6 +20,11 @@
       "@ui/*": ["components/UI/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "stories/Question.stories.jsx"
+  ],
   "exclude": ["node_modules"]
 }
