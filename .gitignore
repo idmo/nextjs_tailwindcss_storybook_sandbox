@@ -38,3 +38,5 @@ yarn-error.log*
 robots.txt
 sitemap.xml
 sitemap-*.xml
+
+*.lock
