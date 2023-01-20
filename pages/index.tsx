@@ -6,7 +6,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <div className="px-8">
-      <main className="flex min-h-screen flex-1 flex-col items-center justify-center py-16">
+      <main className="flex flex-col items-center justify-center flex-1 min-h-screen py-16">
         <h1 className="text-h m-0 text-center text-[4rem] leading-[1.15]">
           Welcome to{" "}
           <a
@@ -29,13 +29,13 @@ const Home: NextPage = () => {
 
       <footer className="flex flex-1 items-center justify-center border-t border-solid border-t-[#eaeaea] py-8">
         <a
-          className="flex grow items-center justify-center"
+          className="flex items-center justify-center grow"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <span id="target" className="ml-2 h-4">
+          <span id="target" className="h-4 ml-2">
             <VercelSVG width={72} height={16} />
           </span>
         </a>
